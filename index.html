@@ -144,8 +144,8 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>terima kasih!</strong> saya sangat menghargai feedback anda.
+            <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+              <strong>Terima Kasih!</strong> Pesan anda sudah terkirim.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <form name="adttaama-contact">
@@ -199,6 +199,7 @@
       const btnKirim = document.querySelector(".btn-kirim");
       const btnLoading = document.querySelector(".btn-loading");
       const alert = document.querySelector(".alert");
+
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
@@ -206,8 +207,8 @@
         btnKirim.classList.toggle("d-none");
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
-            btnLoading.classList.toggle("d-none");
             btnKirim.classList.toggle("d-none");
+            btnLoading.classList.toggle("d-none");
             alert.classList.toggle("d-none");
             form.reset();
             console.log("Success!", response);
