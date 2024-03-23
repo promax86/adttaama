@@ -1,0 +1,22 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+
+#about {
+  background-color: white;
+}
+
+#Project {
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+
+.card {
+  background-color: rgb(46, 46, 46);
+}
+
+#contact {
+  background-color: white;
+}
