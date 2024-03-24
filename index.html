@@ -10,6 +10,8 @@
 
     <!-- bootsrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- AOS animated -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- eksternal CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>MY PORTOFOLIO</title>
@@ -46,7 +48,7 @@
     <section class="jumbotron text-center">
       <img src="img/img1.jpg" alt="M Aditya Pratama" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">M Aditya Pratama</h1>
-      <p class="lead">Web Developer And Freelancer</p>
+      <p class="lead"></p>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -61,18 +63,18 @@
     <!-- about -->
     <section id="about">
       <div class="container">
-        <div class="row text-center">
-          <div class="col">
+        <div class="row text-center mb-3">
+          <div class="col" data-aos="fade-down">
             <h2>About me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right">
             <p>
               Seorang lulusan SMK Karya Guna 2 Bekasi dengan latar belakang dalam bidang Teknik Komputer Jaringan, saya adalah individu yang bersemangat dan berkomitmen untuk mengembangkan keterampilan dalam industri teknologi informasi.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
             <p>Dengan pengetahuan yang saya peroleh selama studi, saya siap untuk memberikan kontribusi yang positif dan menjadi bagian dari tim yang dinamis di perusahaan Anda.</p>
           </div>
         </div>
@@ -90,34 +92,34 @@
 
     <!-- project -->
     <section id="Project">
-      <div class="container justify-content-center text-center">
+      <div class="container">
         <div class="row text-center">
           <div class="col">
-            <h2>My Project</h2>
+            <h2 class="h2 mb-5" data-aos="fade-right">My Project</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col mb-3">
-            <div class="card" style="width: 18rem">
-              <img src="img/mk1.jpg" class="card-img-top" alt="Project 1" />
+          <div class="col-4 mb-3">
+            <div class="card" data-aos="flip-up" data-aos-delay="100" style="width: 22rem">
+              <img src="img/mk1.png" class="card-img-top" alt="Project 1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Halaman Login</p>
               </div>
             </div>
           </div>
-          <div class="col mb-3">
-            <div class="card" style="width: 18rem">
-              <img src="img/mk2.jpg" class="card-img-top" alt="Project 2" />
+          <div class="col-4">
+            <div class="card" data-aos="flip-up" data-aos-delay="700" style="width: 22rem">
+              <img src="img/mk2.png" class="card-img-top" alt="Project 2" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Mini Project, Kalkulator</p>
               </div>
             </div>
           </div>
-          <div class="col mb-3">
-            <div class="card" style="width: 18rem">
-              <img src="img/mk3.jpg" class="card-img-top" alt="Project 3" />
+          <div class="col-4 mb-3">
+            <div class="card" data-aos="flip-up" data-aos-delay="1200" style="width: 22rem">
+              <img src="img/mk3.png" class="card-img-top" alt="Project 3" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Mini Project, To Do List</p>
               </div>
             </div>
           </div>
@@ -188,11 +190,30 @@
     </footer>
     <!-- akhir footer -->
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <!-- GSAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      // use a script tag or an external JS file
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(TextPlugin);
+        gsap.from(".navbar", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
+        gsap.from(".jumbotron img", { duration: 2, rotateY: 360, opacity: 0 });
+        gsap.from(".display-4", { duration: 2, opacity: 0, x: -100, ease: "back" });
+        gsap.to(".lead", { duration: 2.5, delay: 1.5, text: "Web Developer | Freelancer" });
+      });
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Manual JS -->
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbwmW0Ix7p1fuVKqdF6245EHc2C7CjpY4dv9VCT6A_oWiMZAgdWi5SwVvzEaGiKEWAE0/exec";
       const form = document.forms["adttaama-contact"];
