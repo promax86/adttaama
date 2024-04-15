@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- bootsrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- AOS animated -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- eksternal CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>MY PORTOFOLIO</title>
+  </head>
+  <body id="Home">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: black">
+      <div class="container">
+        <a class="navbar-brand" href="#">M Aditya Pratama</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sertifikat.html">Sertifikat</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="project.html">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- sertifikat -->
+    <section id="sert">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md mb-3">
+            <div class="card" data-aos="flip-up" data-aos-delay="100" style="width: 20rem">
+              <img src="img/sert ai.jpeg" class="card-img-top" alt="Project 1" />
+              <div class="card-body">
+                <p class="card-text">Artificial Intelegent Certified</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md mb-3">
+            <div class="card" data-aos="flip-up" data-aos-delay="200" style="width: 20rem">
+              <img src="img/sert js.jpg" class="card-img-top" alt="Project 2" />
+              <div class="card-body">
+                <p class="card-text">JavaScript Certified</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md mb-3">
+            <div class="card" data-aos="flip-up" data-aos-delay="300" style="width: 20em">
+              <img src="img/sert pre.jpeg" class="card-img-top" alt="Project 3" />
+              <div class="card-body">
+                <p class="card-text">Self Prepare Certified</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md mb-3">
+            <div class="card" data-aos="flip-up" data-aos-delay="400" style="width: 20em">
+              <img src="img/sert css.jpeg" class="card-img-top" alt="Project 3" />
+              <div class="card-body">
+                <p class="card-text">CSS Certified</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md mb-3">
+            <div class="card" data-aos="flip-up" data-aos-delay="500" style="width: 20em">
+              <img src="img/sert html.jpeg" class="card-img-top" alt="Project 3" />
+              <div class="card-body">
+                <p class="card-text">HTML Certified</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md mb-3">
+            <div class="card" data-aos="flip-up" data-aos-delay="600" style="width: 20em">
+              <img src="img/sert css2.jpeg" class="card-img-top" alt="Project 3" />
+              <div class="card-body">
+                <p class="card-text">CSS 2 Certified</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- akhir sertifikat -->
+
+    <!-- footer -->
+    <footer class="footer text-center pb-3 text-white" style="background-color: black">
+      <p>created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/adttaama/" class="fw-bold">M Aditya Pratama</a></p>
+    </footer>
+    <!-- akhir footer -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- GSAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      // use a script tag or an external JS file
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(TextPlugin);
+        gsap.from(".navbar", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
+        gsap.from(".jumbotron img", { duration: 2, rotateY: 360, opacity: 0 });
+        gsap.from(".display-4", { duration: 2, opacity: 0, x: -100, ease: "back" });
+        gsap.to(".lead", { duration: 2.5, delay: 1.5, text: "Web Developer | Freelancer" });
+      });
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Manual JS -->
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwmW0Ix7p1fuVKqdF6245EHc2C7CjpY4dv9VCT6A_oWiMZAgdWi5SwVvzEaGiKEWAE0/exec";
+      const form = document.forms["adttaama-contact"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const alert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            btnKirim.classList.toggle("d-none");
+            btnLoading.classList.toggle("d-none");
+            alert.classList.toggle("d-none");
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

@@ -4,20 +4,18 @@ body {
 
 .sect {
   font-weight: bold;
-  color: rgb(130, 113, 227);
-}
-
-#about {
-  background-color: white;
+  /* color: rgb(130, 113, 227); */
+  color: white;
+  margin-top: 100px;
 }
 
 #sert {
-  background-color: rgb(32, 32, 32);
-  color: white;
+  margin-top: 40px;
 }
 
 #Project {
   color: rgb(130, 113, 227);
+  margin-top: 40px;
 }
 
 .card {
@@ -25,10 +23,9 @@ body {
 }
 
 .card-text {
-  color: rgb(130, 113, 227);
+  color: white;
 }
 
 #contact {
-  background-color: rgb(32, 32, 32);
   color: white;
 }
